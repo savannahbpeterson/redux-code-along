@@ -1,0 +1,1 @@
+Simple todo app ready for Redux to be implemented. Meant for code-along so there are no instructions here.

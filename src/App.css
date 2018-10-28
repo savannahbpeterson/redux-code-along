@@ -1,0 +1,18 @@
+.App {
+  display: flex;
+}
+
+.View {
+  border: 1px solid #275E96;
+  width: 50%;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 130px;
+  letter-spacing: 20px;
+  text-transform: uppercase;
+  color: #275E96;
+}
