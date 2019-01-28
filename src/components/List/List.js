@@ -1,11 +1,14 @@
 import React from "react";
+import {connect} from 'react-redux';
+
 
 import trash from "./../../assets/waste_bin_red.svg";
 import "./List.css";
 
 function List(props) {
+  console.log('List props', props.list);
   let tempList = [];
-  let list = tempList.map((item, i) => {
+  let list = props.list.map((item, i) => {
     return (
       <div className="list_item" key={item}>
         <img src={trash} alt="delete" onClick={_ => props.remove(i)} />
@@ -23,4 +26,18 @@ function List(props) {
   );
 }
 
-export default List;
+
+function mapStateToProps(reduxState){
+  return {
+    list: reduxState.list
+  }
+}
+
+
+const connectComponent = connect(mapStateToProps)(List);
+
+export default connectComponent;
+
+
+
+
